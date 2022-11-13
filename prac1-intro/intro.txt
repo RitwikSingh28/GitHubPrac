@@ -3,4 +3,7 @@ Please add your own name and write 2 lines about yourself in this file
 
 - Ritwik Singh
     GDSC NITP Android Co-Lead, and a Flutter Evangelist
+    
+- Sachin Kumar
+    GDSC core member, and i hope to get a lot of experience and it's my pleasure working with you all as a team. 
 
