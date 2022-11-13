@@ -1,7 +1,10 @@
 # GitHubPrac
 A dummy repository for providing means to people to test out and learn the Git/GitHub workflow.
 
-# Contribution Guideling
+# Task 1
+Inside the prac1-intro, add your name and intro into intro.txt file and create a PR to merge your changes.
+
+# Contribution Guidelines
 > - Fork the repo 
 > - Git Clone into your remote machine
 > - Create a new branch (any name would do)
