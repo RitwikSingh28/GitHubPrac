@@ -1,0 +1,6 @@
+This is a sample text file to contain the names and introductions of the various team-members of GDSC NITP Flutter Team
+Please add your own name and write 2 lines about yourself in this file
+
+- Ritwik Singh
+    GDSC NITP Android Co-Lead, and a Flutter Evangelist
+
