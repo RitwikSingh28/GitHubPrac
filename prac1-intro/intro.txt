@@ -19,4 +19,6 @@ Please add your own name and write 2 lines about yourself in this file
 -Simranpreet Kaur 
    GDSC Member(Android and ML Team).Very excited and determined to learn and work with the wonderful team.
 
+-Siddharth Gautam
+  Really happy to be a part of GDSC flutter team.I am here to gain some experience by some teamwork.
  
