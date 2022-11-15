@@ -10,7 +10,7 @@ Please add your own name and write 2 lines about yourself in this file
 - chhotu kumar
     GDSC member, and i hope to get a lot of experience and it's my pleasure working with you all as a team. 
 
-- Rani Kumari 
+- Rani Kumari  
    Happy to be  member of GDSC and i hope to get a lot of experience and it's my pleasure working with you all as a team. 
 
  -Trisha Halder
@@ -21,4 +21,7 @@ Please add your own name and write 2 lines about yourself in this file
 
 -Siddharth Gautam
   Really happy to be a part of GDSC flutter team.I am here to gain some experience by some teamwork.
+
+-Siddharth Kumar
+  GDSC team member(Flutter and Web). Looking forward to working with you all you all
  
