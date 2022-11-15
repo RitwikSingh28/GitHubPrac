@@ -21,4 +21,6 @@ Please add your own name and write 2 lines about yourself in this file
 
 -Siddharth Gautam
   Really happy to be a part of GDSC flutter team.I am here to gain some experience by some teamwork.
+-Anshumali Suri
+  I am a member of GDSC club Flutter department. I am looking forward to having a great experience working here with my teammates.
  
