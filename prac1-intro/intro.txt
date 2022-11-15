@@ -16,3 +16,7 @@ Please add your own name and write 2 lines about yourself in this file
  -Trisha Halder
  Excited to join and contribute in the project of GDSC Android flutter.
 
+-Simranpreet Kaur 
+   GDSC Member(Android and ML Team).Very excited and determined to learn and work with the wonderful team.
+
+ 
