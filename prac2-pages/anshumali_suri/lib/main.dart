@@ -26,9 +26,40 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  bool value=false;
+  final TextEditingController _namecontroller = TextEditingController();
+  final TextEditingController _passwordcontroller = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _namecontroller.addListener(() {
+      final String text = _namecontroller.text.toLowerCase();
+      _namecontroller.value = _namecontroller.value.copyWith(
+        text: text,
+        selection:
+        TextSelection(baseOffset: text.length, extentOffset: text.length),
+        composing: TextRange.empty,
+      );
+    });
+
+    _passwordcontroller.addListener(() {
+      final String text = _passwordcontroller.text.toLowerCase();
+      _passwordcontroller.value = _passwordcontroller.value.copyWith(
+        text: text,
+        selection:
+        TextSelection(baseOffset: text.length, extentOffset: text.length),
+        composing: TextRange.empty,
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    _namecontroller.dispose();
+    _passwordcontroller.dispose();
+    super.dispose();
+  }
+  bool _value=false;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -76,7 +107,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                   TextField(
 
-                    controller: nameController,
+                    controller:_namecontroller,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
@@ -109,7 +140,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                   TextField(
                     obscureText: true,
-                    controller: passwordController,
+                    controller: _passwordcontroller,
                     decoration:  InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),
@@ -142,8 +173,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                 ),
                 onPressed: () {
-                  print(nameController.text);
-                  print(passwordController.text);
+                  print(_namecontroller.text);
+                  print(_passwordcontroller.text);
                 },
               ),
             ),
@@ -166,8 +197,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                 ),
               ),
-              value: value,
-              onChanged: (value) => setState(() => this.value = value!),
+              value: _value,
+              onChanged: (value) => setState(() => this._value = value!),
 
             ),
 
