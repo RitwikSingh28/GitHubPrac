@@ -91,7 +91,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             SizedBox(
               height: 20,
             ),
-            Container(
+            Padding(
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -152,36 +152,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               height: 20,
             ),
 
-            Container(
+            CheckboxListTile(
 
-              alignment: Alignment.center,
-              child: CheckboxListTile(
+              activeColor: Colors.grey[800],
+              controlAffinity: ListTileControlAffinity.leading,
+              title: Transform.translate(
+                offset: const Offset(-20, 0),
+                child: Text(
+                  'Keep me logged in',
+                  style: TextStyle(
 
-                activeColor: Colors.grey[800],
-                controlAffinity: ListTileControlAffinity.leading,
-                title: Transform.translate(
-                  offset: const Offset(-20, 0),
-                  child: Text(
-                    'Keep me logged in',
-                    style: TextStyle(
-
-                      fontSize: 20,
-                    ),
+                    fontSize: 20,
                   ),
                 ),
-                value: value,
-                onChanged: (value) => setState(() => this.value = value!),
-
               ),
+              value: value,
+              onChanged: (value) => setState(() => this.value = value!),
+
             ),
 
             SizedBox(
               height: 230,
             ),
 
-            Align(
-              alignment:Alignment.bottomCenter,
-              child: TextButton(
+              TextButton(
 
                 onPressed: () {
                   //forgot password screen
@@ -193,7 +187,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                 ),
               ),
-            ),
+
 
 
           ],
