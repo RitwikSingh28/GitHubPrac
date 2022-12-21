@@ -63,7 +63,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.fromLTRB(20, 130, 20, 20),
         child: ListView(
           children: <Widget>[
 
@@ -203,21 +203,21 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
 
             SizedBox(
-              height: 230,
+              height: 150,
             ),
 
-              TextButton(
+            TextButton(
 
-                onPressed: () {
-                  //forgot password screen
-                },
-                child: const Text(
-                  'Forgot Password ?',
-                  style:TextStyle(
-                    fontSize: 16,
-                  ),
+              onPressed: () {
+                //forgot password screen
+              },
+              child: const Text(
+                'Forgot Password ?',
+                style:TextStyle(
+                  fontSize: 16,
                 ),
               ),
+            ),
 
 
 
