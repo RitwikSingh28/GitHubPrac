@@ -1,4 +1,6 @@
+import 'package:anshumali_suri/verification.dart';
 import 'package:flutter/material.dart';
+
 
 void main() => runApp(const MyApp());
 
@@ -175,6 +177,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 onPressed: () {
                   print(_namecontroller.text);
                   print(_passwordcontroller.text);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MyApplication()),
+                  );
                 },
               ),
             ),
