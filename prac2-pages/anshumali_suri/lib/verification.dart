@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'main.dart';
+
 void main() => runApp(const MyApplication());
 
 class MyApplication extends StatelessWidget {
@@ -193,7 +195,10 @@ class _MyWidgetState extends State<MyWidget> {
           TextButton(
 
             onPressed: () {
-              //forgot password screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MyApp()),
+              );
             },
             child: const Text(
               'Return To Login',
