@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'main.dart';
 
@@ -9,12 +10,17 @@ class MyApplication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ScreenUtilInit(
+    designSize: const Size(425,752),
+    builder: (context,child) {
+      return  MaterialApp(
 
-      home: Scaffold(
+        home: Scaffold(
 
-        body: const MyWidget(),
-      ),
+          body: MyWidget(),
+        ),
+      );
+    }
     );
   }
 }
@@ -35,7 +41,7 @@ class _MyWidgetState extends State<MyWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding:  EdgeInsets.all(20.h),
       child: ListView(
         children: <Widget>[
           Container(
@@ -43,34 +49,34 @@ class _MyWidgetState extends State<MyWidget> {
             child: Text(
               'Login Verification',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 24.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 30.h,
           ),
           Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.fromLTRB(40, 0, 40,0),
+            padding: EdgeInsets.fromLTRB(30.w, 0.h, 30.w,0.h),
             child: Text(
               'To continue logging in we need you to complete one of the following:',
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 18
+                  fontSize: 18.sp
               ),
             ),
           ),
           SizedBox(
-            height: 35,
+            height: 35.h,
           ),
           RadioListTile(
             title:  Transform.translate(
-              offset: const Offset(-20, 0),
+              offset:  Offset(-20.sp, 0.sp),
               child:Text('Verification code via email',
                 style: TextStyle(
-                    fontSize: 18
+                    fontSize: 18.sp
                 ),
               ),
             ),
@@ -85,9 +91,9 @@ class _MyWidgetState extends State<MyWidget> {
             },
           ),
 
-          Container(padding: EdgeInsets.fromLTRB(56,0,50,0),
+          Container(padding: EdgeInsets.fromLTRB(56.w,0.h,50.w,0.h),
             child: isEmail ?
-            Text('$radio',style: TextStyle(fontSize: 14,color: Colors.grey[600]),
+            Text('$radio',style: TextStyle(fontSize: 14.sp,color: Colors.grey[600]),
             ):SizedBox(),
           ),
 
@@ -97,10 +103,10 @@ class _MyWidgetState extends State<MyWidget> {
 
           RadioListTile(
             title: Transform.translate(
-              offset: const Offset(-20, 0),
+              offset: Offset(-20.sp, 0.sp),
               child: Text('Verification code via SMS',
                 style: TextStyle(
-                    fontSize: 18
+                    fontSize: 18.sp
                 ),
               ),
             ),
@@ -116,19 +122,19 @@ class _MyWidgetState extends State<MyWidget> {
           ),
 
           Container(
-            padding: EdgeInsets.fromLTRB(56,0,50,0),
+            padding: EdgeInsets.fromLTRB(56.w,0.h,50.w,0.h),
             child: isEmail ?SizedBox():
             Text('$radio',style: TextStyle(fontSize: 14,color: Colors.grey[600]),),
           ),
 
 
           SizedBox(
-            height: 30,
+            height: 30.h,
           ),
 
           Container(
-            height: 50,
-            padding: const EdgeInsets.fromLTRB(56, 0, 180, 0),
+            height: 50.h,
+            padding: EdgeInsets.fromLTRB(56.w, 0.h, 180.w, 0.h),
 
             child: ElevatedButton(
               onPressed: (){
@@ -138,11 +144,11 @@ class _MyWidgetState extends State<MyWidget> {
                 isEmail?'Send Email OTP':
                 'Send SMS code',
                 style: TextStyle(
-                    fontSize: 16
+                    fontSize: 16.sp
                 ),
               ),
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(5),
+                padding: EdgeInsets.all(5.h),
                 primary: Colors.grey[800],
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -152,44 +158,41 @@ class _MyWidgetState extends State<MyWidget> {
           ),
 
           SizedBox(
-            height: 78,
+            height: 45.h,
           ),
 
-          Container(
-
-            child: CheckboxListTile(
-                value: changed,
-                activeColor: Colors.grey[800],
-                controlAffinity: ListTileControlAffinity.leading,
-                title: Transform.translate(
-                  offset: const Offset(-20, 0),
-                  child: Text(
-                    'Remember this device',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
+          CheckboxListTile(
+              value: changed,
+              activeColor: Colors.grey[800],
+              controlAffinity: ListTileControlAffinity.leading,
+              title: Transform.translate(
+                offset: Offset(-20.sp, 0.sp),
+                child: Text(
+                  'Remember this device',
+                  style: TextStyle(
+                    fontSize: 20.sp,
                   ),
                 ),
+              ),
 
-                onChanged: (val) {
-                  setState(() {
-                    changed = val!;
+              onChanged: (val) {
+                setState(() {
+                  changed = val!;
 
-                  });
+                });
 
-                }
-            ),
+              }
           ),
 
-          Container(
-            padding: EdgeInsets.fromLTRB(56,0,50,0),
+
+            Padding(padding: EdgeInsets.fromLTRB(56.w,0.h,50.w,0.h),
             child: changed?
-            Text('$change',style: TextStyle(fontSize: 14,color: Colors.grey[600]),):SizedBox(),
-          ),
+            Text('$change',style: TextStyle(fontSize: 14.sp,color: Colors.grey[600]),):SizedBox(),
+    ),
 
 
           SizedBox(
-            height: 250,
+            height: 150.h,
           ),
 
           TextButton(
@@ -200,10 +203,10 @@ class _MyWidgetState extends State<MyWidget> {
                 MaterialPageRoute(builder: (context) => const MyApp()),
               );
             },
-            child: const Text(
+            child:  Text(
               'Return To Login',
               style:TextStyle(
-                fontSize: 16,
+                fontSize: 16.sp,
               ),
             ),
           ),
