@@ -1,5 +1,6 @@
 import 'package:anshumali_suri/verification.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 void main() => runApp(const MyApp());
@@ -9,13 +10,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ScreenUtilInit(
+      designSize: const Size(425,752),
+        builder: (context,child) {
+          return MaterialApp(
 
-      home: Scaffold(
+            home: Scaffold(
 
-        body: const MyStatefulWidget(),
+              body: const MyStatefulWidget(),
 
-      ),
+            ),
+          );
+        }
     );
   }
 }
@@ -65,34 +71,34 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.fromLTRB(20, 130, 20, 20),
+        padding: EdgeInsets.fromLTRB(20.w, 50.h, 20.w, 20.h),
         child: ListView(
           children: <Widget>[
 
             Container(
 
                 alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
-                child: const Text(
+                padding:  EdgeInsets.all(10.w),
+                child:  Text(
                   'Login',
 
                   style: TextStyle(
 
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30),
+                      fontWeight: FontWeight.w700,
+                      fontSize: 30.sp),
                 )),
             Container(
                 alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.all(10.w),
                 child:  Text(
                   'Create an account',
-                  style: TextStyle(fontSize: 20,
+                  style: TextStyle(fontSize: 20.sp,
                     color: Colors.blueAccent,
                   ),
 
                 )),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding:  EdgeInsets.all(10.w),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:<Widget>[
@@ -100,19 +106,19 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     'Username',
 
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 25.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 5.h,
                   ),
                   TextField(
 
                     controller:_namecontroller,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       labelText: 'Enter you username',
                     ),
@@ -122,10 +128,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 20.h,
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              padding:  EdgeInsets.fromLTRB(10.w, 10.h, 10.w, 0.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:<Widget>[
@@ -133,12 +139,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     'Password',
 
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 25.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 5.h,
                   ),
                   TextField(
                     obscureText: true,
@@ -155,16 +161,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 30.h,
             ),
 
             Container(
-              height: 65,
-              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              height: 65.h,
+              padding:  EdgeInsets.fromLTRB(10.w, 0.h, 10.w, 0.h),
               child: ElevatedButton(
-                child: const Text('Log In',
+                child: Text('Log In',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 16.sp,
 
                   ),
                 ),
@@ -186,7 +192,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
 
             SizedBox(
-              height: 20,
+              height: 20.h,
             ),
 
             CheckboxListTile(
@@ -194,22 +200,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               activeColor: Colors.grey[800],
               controlAffinity: ListTileControlAffinity.leading,
               title: Transform.translate(
-                offset: const Offset(-20, 0),
+                offset: Offset(-20.sp, 0.sp),
                 child: Text(
                   'Keep me logged in',
                   style: TextStyle(
 
-                    fontSize: 20,
+                    fontSize: 20.sp,
                   ),
                 ),
               ),
               value: _value,
-              onChanged: (value) => setState(() => this._value = value!),
+              onChanged: (value) => setState(() => _value = value!),
 
             ),
 
             SizedBox(
-              height: 150,
+              height: 120.h,
             ),
 
             TextButton(
@@ -217,10 +223,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               onPressed: () {
                 //forgot password screen
               },
-              child: const Text(
+              child:  Text(
                 'Forgot Password ?',
                 style:TextStyle(
-                  fontSize: 16,
+                  fontSize: 16.sp,
                 ),
               ),
             ),
