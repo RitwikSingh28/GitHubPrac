@@ -9,9 +9,9 @@ class Login2 extends StatefulWidget{
 
 }
 class _Login2State extends State<Login2>
-{ var val2 = false;
-  String? str1 ;
-  var check = false;
+{ var _val2 = false;
+  String? _str1 ;
+  var _check = false;
   @override
   Widget build(BuildContext context){
     return Scaffold(

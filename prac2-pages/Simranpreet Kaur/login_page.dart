@@ -11,7 +11,7 @@ class LoginPage extends StatefulWidget{
 
 }
 class _LoginPageState extends State<LoginPage> {
-  bool check1 = true;
+  bool _check1 = true;
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(height:7),
-        //username textfield
+        //username text field
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Container(
@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
             SizedBox(height: 7,),
-        //Password textfeild
+        //Password text field 
             Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
