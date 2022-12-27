@@ -86,6 +86,7 @@ class _LoginpageState extends State<Loginpage> {
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(20.0,0,0,0),
                     child: TextField(
+                      obscureText:true,
                       decoration: InputDecoration(
                           hintText: 'Enter your Password',
                           contentPadding: EdgeInsets.symmetric(vertical: 20.0)
