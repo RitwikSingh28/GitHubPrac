@@ -71,7 +71,7 @@ class Login extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 40, top: 20),
                   child: const TextField(
-                    obscureText: ,
+                    obscureText: true,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
