@@ -17,7 +17,8 @@ class _verificationState extends State<verification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      body: SafeArea(
+       child: Padding(
         padding: EdgeInsets.fromLTRB(10.0,100.0,30.0,0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -195,6 +196,7 @@ class _verificationState extends State<verification> {
             ),
           ],
         ),
+      ),
       ),
     );
   }
