@@ -66,7 +66,8 @@ class _LoginpageState extends State<Loginpage> {
                     child: TextField(
                       decoration: InputDecoration(
                           hintText: 'Enter your username',
-                          contentPadding: EdgeInsets.symmetric(vertical: 20.0)
+                          contentPadding: EdgeInsets.symmetric(vertical: 20.0),
+                          border: InputBorder.none
                       ),
                     ),
                   ),
@@ -91,7 +92,8 @@ class _LoginpageState extends State<Loginpage> {
                       obscureText:true,
                       decoration: InputDecoration(
                           hintText: 'Enter your Password',
-                          contentPadding: EdgeInsets.symmetric(vertical: 20.0)
+                          contentPadding: EdgeInsets.symmetric(vertical: 20.0),
+                          border: InputBorder.none
                       ),
                     ),
                   ),
