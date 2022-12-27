@@ -17,6 +17,7 @@ class _verificationState extends State<verification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
        child: Padding(
         padding: EdgeInsets.fromLTRB(10.0,100.0,30.0,0),
