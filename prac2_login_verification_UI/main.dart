@@ -12,7 +12,7 @@ class Loginpage extends StatefulWidget {
 }
 
 class _LoginpageState extends State<Loginpage> {
-  bool value=true;
+  bool _value=true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,10 +122,10 @@ class _LoginpageState extends State<Loginpage> {
                       child: Checkbox(
                         checkColor: Colors.white,
                         activeColor: Colors.black,
-                        value: this.value,
+                        value: this._value,
                         onChanged: (value){
                           setState(() {
-                            this.value = value!;
+                            this._value = value!;
                           });
                         },
                       ),
