@@ -17,8 +17,7 @@ class _Login2State extends State<Login2>
     return Scaffold(
       backgroundColor: Colors.white,
       body:SafeArea(
-        child :Center(
-          child:Column(
+        child : Column(
             children:  [
               SizedBox(height: 55,),
               //Login Verification
@@ -45,10 +44,10 @@ class _Login2State extends State<Login2>
                 title: Text("Verification code via email"),
                 activeColor: Color(0xFF06061C),
                 value: "email",
-                groupValue: str1,
+                groupValue: _str1,
                 onChanged: ((value) {
                   setState(() {
-                    str1 = value.toString();
+                    _str1 = value.toString();
                   });
                 }),
               ),
@@ -56,10 +55,10 @@ class _Login2State extends State<Login2>
                 title: Text("Verification code via SMS"),
                 activeColor: Color(0xFF06061C),
                 value: "SMS",
-                groupValue: str1,
+                groupValue: _str1,
                 onChanged: ((value) {
                   setState(() {
-                    str1 = value.toString();
+                    _str1 = value.toString();
                   });
                 }),
               ),
@@ -82,34 +81,28 @@ class _Login2State extends State<Login2>
           ),
 
           SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0,0,210,0),
-            child: Container(
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                  color: Color(0xFF06061C),
-                  borderRadius: BorderRadius.circular(15)
+          Container(
+                  decoration: BoxDecoration(
+                    color:const Color(0xFF06061C),
+                    border: Border.all(color:const Color(0xFF06061C), ),
+                    borderRadius: BorderRadius.circular(15),
                   ),
-                height : 50,
-                width : 150,
-              child:  SizedBox(
-                width: 600.0,
-                height: 250.0,
-                child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Color(0xFF06061C),
-                    ),
-                    child: const Text('Send Code',
-                      style: TextStyle(fontSize: 12,
+                  height: 50,
+                  width : 125,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: const Color(0xFF06061C),
+                      ),
+                      child: const Text('Send Code',
+                      style: TextStyle(fontSize: 16,
                       ),),
-                    onPressed: () {
-
-                    },
-                  ),
+                      onPressed: () {
+                        
+                      },
+                    ),
+                  
               ),
-
-            ),
-          ),
+            
           SizedBox(height: 70),
               Padding(
                 padding: const EdgeInsets.only(left:20.0),
@@ -119,11 +112,11 @@ class _Login2State extends State<Login2>
                         scale: 1.3,
                         child: Checkbox( //only check box
                             activeColor: Color(0xFF06061C),
-                            value: val2, //unchecked
+                            value: _val2, //unchecked
                             onChanged: (bool? value){
                               //value returned when checkbox is clicked
                               setState(() {
-                                val2 = value!;
+                                _val2 = value!;
                               });
                             }
                         )
@@ -159,7 +152,7 @@ class _Login2State extends State<Login2>
               ),
           ],
         ),
-      ),),);
+      ),);
 
 
   }

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+
 import 'login2.dart' ;
 
 class LoginPage extends StatefulWidget{
@@ -11,96 +12,98 @@ class LoginPage extends StatefulWidget{
 
 }
 class _LoginPageState extends State<LoginPage> {
-  bool check1 = true;
+  bool _check1 = true;
   @override
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.white,
-
       body: SafeArea(
-        child : Center(
-          child : SingleChildScrollView(
-                   child : Column(
-              children: [
-            SizedBox(height:55),
+        child : SingleChildScrollView(
+                child : Column(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    const SizedBox(height:55),
              //Login
-             Text(
-               'Login',
-             style: TextStyle(
-               fontWeight: FontWeight.bold,
-               fontSize: 30,
-               color: Color(0xFF06061C),
-             ),
-             ),
-            SizedBox(height: 25),
-        //Create an account : Signup
-            Text('Create an account',
-              style:TextStyle(
-                color: Colors.deepPurpleAccent,
-                fontWeight: FontWeight.normal,
-                fontSize: 20,
-              ),
-            ),
-            SizedBox(height: 30,),
-            Container(
-              child: Column(
-                children: [
+                    const Text(
+                        'Login',
+                         
+                         style: TextStyle(
 
-                  Text('Username',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Color(0xFF06061C),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                color: Color(0xFF06061C),
+                                ),
+                      ),
+                    const SizedBox(height: 25),
+             //Create an account : Signup
+                    const Text(
+                        'Create an account',
+                         style:TextStyle(
+                               color: Colors.deepPurpleAccent,
+                               fontWeight: FontWeight.normal,
+                               fontSize: 20,
+                               ),
+                      ),
+                    const SizedBox(height: 30,),
+            // Username
+                    // ignore: prefer_const_constructors
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: const Text(
+                          'Username',
+                           textAlign: TextAlign.left,
+                           style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Color(0xFF06061C),
+                                   ),
+                            ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height:7),
-        //username text field
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: Colors.grey),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Padding(
-                     padding: const EdgeInsets.only(left: 20.0),
-                      child :
-                      TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'Enter your username',
-                      contentPadding: EdgeInsets.symmetric(vertical: 20),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 30,),
-                Container(
-                  child: Text('Password',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Color(0xFF06061C),
-                    ),
-                  ),
-                ),
-            SizedBox(height: 7,),
-        //Password text field
-            Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
+                   const SizedBox(height:7),
+             //username text field
+                    Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                            child: Container(
+                                  decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(color: Colors.grey),
+                                  borderRadius: BorderRadius.circular(12),
+                                   ),
+                                  child: const Padding(
+                                         padding: EdgeInsets.only(left: 20.0),
+                                         child : TextField(
+                                                decoration: InputDecoration(
+                                                border: InputBorder.none,
+                                                hintText: 'Enter your username',
+                                                contentPadding: EdgeInsets.symmetric(vertical: 20),
+                                                ),
+                                              ),
+                                           ),
+                                        ),
+                            ),
+                     const SizedBox(height: 30,),
+                     const Text(
+                          'Password',
+                          textAlign: TextAlign.left,
+                           style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  color: Color(0xFF06061C),
+                                  ),
+                              ),
+                
+                      const SizedBox(height: 7,),
+              //Password text field
+                 Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                      child: Container(
+                      decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20.0),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 20.0),
                       child: TextField(
                         obscureText: true,
                         decoration: InputDecoration(
@@ -112,14 +115,14 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-            SizedBox(height: 30),
-        //Login Button
+                   const SizedBox(height: 30),
+          //Login Button
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Container(
                   decoration: BoxDecoration(
-                    color:Color(0xFF06061C),
-                    border: Border.all(color:Color(0xFF06061C), ),
+                    color:const Color(0xFF06061C),
+                    border: Border.all(color:const Color(0xFF06061C), ),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   height: 50,
@@ -130,19 +133,19 @@ class _LoginPageState extends State<LoginPage> {
                     height: 250.0,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF06061C),
+                        primary: const Color(0xFF06061C),
                       ),
                       child: const Text('Log In',
                       style: TextStyle(fontSize: 20,
                       ),),
                       onPressed: () {
-                        Navigator. of(context). push(MaterialPageRoute(builder: (context)=>Login2()));
+                        Navigator. of(context). push(MaterialPageRoute(builder: (context)=>const Login2()));
                       },
                     ),
                   )
               ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
         //CheckBox : keep me logged in
                 Padding(
                   padding: const EdgeInsets.only(left:20.0),
@@ -151,33 +154,33 @@ class _LoginPageState extends State<LoginPage> {
                       Transform.scale(
                         scale: 1.3,
                         child: Checkbox( //only check box
-                          activeColor: Color(0xFF06061C),
-                            value: check1, //unchecked
+                          activeColor: const Color(0xFF06061C),
+                            value: _check1, //unchecked
                             onChanged: (bool? value){
                               //value returned when checkbox is clicked
                               setState(() {
-                                check1 = value!;
+                                _check1 = value!;
                               });
                             }
                         )
                       ),
-                      Text(
+                      const Text(
                         "Keep me logged in",
                         style: TextStyle(fontSize: 18.0,)
                       ),
                     ],
                   ),
                 ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
         //Forgot Password?
-                Text('Forgot Password?',
+                const Text('Forgot Password?',
                   style:TextStyle(
                     color: Colors.deepPurpleAccent,
                     fontWeight: FontWeight.normal,
                     fontSize: 20,
                   ),
                 ),
-      ],),),)
-    ),);
+      ],),
+    ),),);
   }
 }
