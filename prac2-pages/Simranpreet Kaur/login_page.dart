@@ -11,14 +11,16 @@ class LoginPage extends StatefulWidget{
 
 }
 class _LoginPageState extends State<LoginPage> {
-  bool _check1 = true;
+  bool check1 = true;
   @override
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.white,
+
       body: SafeArea(
         child : Center(
-            child: Column(
+          child : SingleChildScrollView(
+                   child : Column(
               children: [
             SizedBox(height:55),
              //Login
@@ -88,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
             SizedBox(height: 7,),
-        //Password text field 
+        //Password text field
             Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -175,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 20,
                   ),
                 ),
-      ],)
-    ),),);
+      ],),),)
+    ),);
   }
 }
