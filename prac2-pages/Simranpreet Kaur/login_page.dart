@@ -47,18 +47,18 @@ class _LoginPageState extends State<LoginPage> {
                     const SizedBox(height: 30,),
             // Username
                     // ignore: prefer_const_constructors
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: const Text(
-                          'Username',
-                           textAlign: TextAlign.left,
-                           style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: Color(0xFF06061C),
-                                   ),
-                            ),
-                    ),
+                    Row(children: [
+              Padding(
+                padding: const EdgeInsets.only(left :20 ),
+                child: Text('Username',
+                textAlign:TextAlign.left,
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+                ),
+              )
+            ],),
                    const SizedBox(height:7),
              //username text field
                     Padding(
@@ -82,15 +82,18 @@ class _LoginPageState extends State<LoginPage> {
                                         ),
                             ),
                      const SizedBox(height: 30,),
-                     const Text(
-                          'Password',
-                          textAlign: TextAlign.left,
-                           style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: Color(0xFF06061C),
-                                  ),
-                              ),
+                     Row(children: [
+              Padding(
+                padding: const EdgeInsets.only(left :20 ),
+                child: Text('Password',
+                textAlign:TextAlign.left,
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+                ),
+              )
+            ],),
                 
                       const SizedBox(height: 7,),
               //Password text field

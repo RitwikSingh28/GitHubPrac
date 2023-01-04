@@ -81,27 +81,34 @@ class _Login2State extends State<Login2>
           ),
 
           SizedBox(height: 20),
-          Container(
-                  decoration: BoxDecoration(
-                    color:const Color(0xFF06061C),
-                    border: Border.all(color:const Color(0xFF06061C), ),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  height: 50,
-                  width : 125,
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFF06061C),
-                      ),
-                      child: const Text('Send Code',
-                      style: TextStyle(fontSize: 16,
-                      ),),
-                      onPressed: () {
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left:60),
+                child: Container(
+                        decoration: BoxDecoration(
+                          color:const Color(0xFF06061C),
+                          border: Border.all(color:const Color(0xFF06061C), ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        height: 50,
+                        width : 125,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: const Color(0xFF06061C),
+                            ),
+                            child: const Text('Send Code',
+                            style: TextStyle(fontSize: 16,
+                            ),),
+                            onPressed: () {
+                              
+                            },
+                          ),
                         
-                      },
                     ),
-                  
               ),
+            ],
+          ),
             
           SizedBox(height: 70),
               Padding(
