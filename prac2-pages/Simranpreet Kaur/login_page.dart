@@ -36,14 +36,16 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     const SizedBox(height: 25),
              //Create an account : Signup
-                    const Text(
+                    TextButton( onPressed :() { },
+                        child :Text(
                         'Create an account',
                          style:TextStyle(
                                color: Colors.deepPurpleAccent,
                                fontWeight: FontWeight.normal,
-                               fontSize: 20,
-                               ),
+                               fontSize: 18,
+                               ),)
                       ),
+
                     const SizedBox(height: 30,),
             // Username
                     // ignore: prefer_const_constructors
@@ -176,12 +178,13 @@ class _LoginPageState extends State<LoginPage> {
                 ),
             const SizedBox(height: 20),
         //Forgot Password?
-                const Text('Forgot Password?',
+                TextButton(onPressed: () {},
+                child: Text('Forgot Password?',
                   style:TextStyle(
                     color: Colors.deepPurpleAccent,
                     fontWeight: FontWeight.normal,
-                    fontSize: 20,
-                  ),
+                    fontSize: 18,
+                  ),)
                 ),
       ],),
     ),),);
