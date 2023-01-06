@@ -67,8 +67,8 @@ class _Login2State extends State<Login2>{
                       onChanged: ((value) {
                         setState(() {
                           _str1 = value.toString();
-                          r1=true;
-                          r2=false;
+                          _r1=true;
+                          _r2=false;
                         });
                       }),
                     ),
@@ -90,8 +90,8 @@ class _Login2State extends State<Login2>{
                       onChanged: ((value) {
                         setState(() {
                           _str1 = value.toString();
-                          r1=false;
-                          r2=true;
+                          _r1=false;
+                          _r2=true;
                         });
                       }),
                     ),
@@ -189,7 +189,7 @@ class _Login2State extends State<Login2>{
     );
   }
   Widget responsivetext(){
-    if(r1){
+    if(_r1){
       return Text('We will be sending a code on your email that can be entered to verify the accout.',
       textAlign: TextAlign.left,
                     style: TextStyle(
@@ -198,7 +198,7 @@ class _Login2State extends State<Login2>{
                       fontSize: 15.sp,
                     ),);
     }
-    else if(r2){
+    else if(_r2){
       return Text("We will be sending a code on your mobile phone which can be entered to verify the account",
       textAlign: TextAlign.left,
                     style: TextStyle(
