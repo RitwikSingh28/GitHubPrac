@@ -12,8 +12,8 @@ class Login2 extends StatefulWidget{
 class _Login2State extends State<Login2>{
   var _val2 = false; //checkbox
   String? _str1 ; //RadioListTile
-  bool r1=false; //email
-  bool r2=false; //sms
+  bool _r1=false; //email
+  bool _r2=false; //sms
 
  // Widget responsivetext(); 
 
