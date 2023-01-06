@@ -9,9 +9,10 @@ class Login2 extends StatefulWidget{
 
 }
 class _Login2State extends State<Login2>
-{ var _val2 = false;
-  String? _str1 ;
-  var _check = false;
+{ var _val2 = false; //chechbox
+  String? _str1 ; //RadioListTile
+  bool r1=false; //email
+  bool r2=false; //sms
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -48,6 +49,8 @@ class _Login2State extends State<Login2>
                 onChanged: ((value) {
                   setState(() {
                     _str1 = value.toString();
+                    r1=true;
+                    r2=false;
                   });
                 }),
               ),
@@ -59,6 +62,8 @@ class _Login2State extends State<Login2>
                 onChanged: ((value) {
                   setState(() {
                     _str1 = value.toString();
+                    r1=false;
+                    r2=true;
                   });
                 }),
               ),
@@ -68,15 +73,7 @@ class _Login2State extends State<Login2>
           SizedBox(height: 10,),
           Padding(
             padding: const EdgeInsets.fromLTRB(60,0,25,10),
-            child: Text(
-                'We\'ll send a code to your mobile phone that can be entered to verify your identity.',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-
-                  color: Colors.grey[700],
-                  fontSize: 15,
-                ),
-              ),
+            child: responsivetext() , // responsive text according to the option selected.
 
           ),
 
@@ -162,5 +159,32 @@ class _Login2State extends State<Login2>
       ),);
 
 
+  }
+  Widget responsivetext(){
+    if(r1){
+      return Text('We will be sending a code on your email that can be entered to verify the accout.',
+      textAlign: TextAlign.left,
+                    style: TextStyle(
+        
+                      color: Colors.grey[700],
+                      fontSize: 15,
+                    ),);
+    }
+    else if(r2){
+      return Text("We will be sending a code on your mobile phone which can be entered to verify the account",
+      textAlign: TextAlign.left,
+                    style: TextStyle(
+        
+                      color: Colors.grey[700],
+                      fontSize: 15,
+                    ),);
+    }
+    else return Text('Select one of the above options for account verification ',
+    textAlign: TextAlign.left,
+                    style: TextStyle(
+        
+                      color: Colors.grey[700],
+                      fontSize: 15,
+                    ),);
   }
 }
