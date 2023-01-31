@@ -1,1 +1,3 @@
-
+Login and verification UI created.
+Material.dart package used.
+Screenshot added.
