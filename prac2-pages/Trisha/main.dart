@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: Colors.yellowAccent,
-      
-      home:LoginVerification(),
-    );//MaterialApp
+      color: Color.fromARGB(255, 212, 212, 195),
+      home: LoginPage(),
+    );
   }
 }
+
